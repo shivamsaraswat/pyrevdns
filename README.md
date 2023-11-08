@@ -47,7 +47,7 @@ python3 pyrevdns -h
 The output shown below are the latest supported commands.
 
 ```bash
-usage: pyrevdns [-h] [-v] [-ip IP] [-l LIST] [-d] [-t THREADS] [-r RESOLVER] [-o OUTPUT] [-silent]
+usage: pyrevdns [-h] [-v] [-ip IP] [-l LIST] [-d] [-t THREADS] [-r RESOLVER] [-o OUTPUT] [-sr] [-silent]
 
 PYrevDNS (Reverse DNS lookup tool)
 
@@ -69,6 +69,7 @@ CONFIGURATION:
 OUTPUT:
   -o OUTPUT, --output OUTPUT
                         Output file
+  -sr, --success        display only successful results
   -silent               display silent output
 
 Example: python3 pyrevdns -ip 216.58.196.110
