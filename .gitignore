@@ -1,0 +1,3 @@
+dist/
+pyrevdns/__pycache__
+pyrevdns.egg-info

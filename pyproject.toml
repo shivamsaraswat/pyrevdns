@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyrevdns"
+version = "1.2"
+description = "PYrevDNS is a simple tool for performing reverse DNS lookups on IP addresses."
+authors = [{ name = "Shivam Saraswat", email = "thecybersapien@protonmail.com" }]
+license = { file = "LICENSE.md" }
+readme = "README.md"
+dependencies = ["dnspython"]
+requires-python = ">=3.10"
+
+[project.urls]
+repository = "https://github.com/shivamsaraswat/pyrevdns"
