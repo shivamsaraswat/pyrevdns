@@ -11,7 +11,7 @@ class Pyrevdns:
 
 
     @staticmethod
-    def lookup(ip_address:str, resolver_ip:str='8.8.8.8', only_domain:bool=False, output_file:str='') -> None:
+    def lookup(ip_address:str, resolver_ip:str='8.8.8.8', only_domain:bool=False, output_file:str='', success:bool=False) -> None:
         """
         This function performs a reverse DNS lookup on the specified IP address using the specified DNS resolver.
 
@@ -56,17 +56,29 @@ class Pyrevdns:
                 return output
 
         except dns.resolver.NoAnswer:
+
+            if success:
+                return ""
+
             return "No PTR record found"
 
         except dns.resolver.Timeout:
+
+            if success:
+                return ""
+
             return "DNS resolution timeout"
 
         except dns.exception.DNSException as e:
+
+            if success:
+                return ""
+
             return f"Unable to resolve {ip_address} [DNS Exception: {e}]"
 
 
     @classmethod
-    def do_dns_lookup(self, single_ip:str, ip_list:list='', resolver_ip:str='8.8.8.8', only_domain:bool=False, number_of_threads:int=2, output_file:str='') -> None:
+    def do_dns_lookup(self, single_ip:str, ip_list:list='', resolver_ip:str='8.8.8.8', only_domain:bool=False, number_of_threads:int=2, output_file:str='', success:bool=False) -> None:
         """
         This function performs calls the lookup function for each IP address or IP addresses in the specified file.
 
@@ -91,20 +103,27 @@ class Pyrevdns:
 
         if single_ip:
             q.put(single_ip)
+
         elif ip_list:
             try:
                 with open(ip_list, 'r') as f:
                     for ip in f:
                         q.put(ip.rstrip('\n'))
+
             except FileNotFoundError:
                 print(f"Unable to open {ip_list}")
 
         def worker():
             while True:
                 ip = q.get()
+
                 if ip is None:
                     break
-                print(self.lookup(ip, resolver_ip, only_domain, output_file))
+
+                lookup_result = self.lookup(ip, resolver_ip, only_domain, output_file, success)
+                if lookup_result:
+                    print(lookup_result)
+
                 q.task_done()
 
         threads = []

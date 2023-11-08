@@ -22,7 +22,7 @@ def main():
         logo()
 
     pyrevdns_object = pyrevdns.Pyrevdns()
-    pyrevdns_object.do_dns_lookup(args.ip, args.list, args.resolver, args.domain, args.threads, args.output)
+    pyrevdns_object.do_dns_lookup(args.ip, args.list, args.resolver, args.domain, args.threads, args.output, args.success)
 
 
 if __name__ == '__main__':

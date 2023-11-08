@@ -23,6 +23,7 @@ def parse_arguments() -> argparse.Namespace:
 
     group3 = parser.add_argument_group('OUTPUT')
     group3.add_argument('-o', '--output', help='Output file')
+    group3.add_argument('-sr', '--success', action='store_true', help='display only successful results')
     group3.add_argument('-silent', action='store_true', help='display silent output')
 
     args = parser.parse_args()
