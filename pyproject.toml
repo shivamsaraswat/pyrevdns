@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyrevdns"
-version = "1.0"
+version = "1.0.1"
 description = "PYrevDNS is a simple tool for performing reverse DNS lookups on IP addresses."
 authors = [{ name = "Shivam Saraswat", email = "thecybersapien@protonmail.com" }]
 license = { file = "LICENSE.md" }
