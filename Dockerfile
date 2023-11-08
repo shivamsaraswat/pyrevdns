@@ -2,7 +2,7 @@
 # Run: docker run -it --rm pyrevdns -h
 
 # Base Image
-FROM cgr.dev/chainguard/python:latest
+FROM cgr.dev/chainguard/python:latest-dev
 
 # Maintainer
 LABEL maintainer="Shivam Saraswat <thecybersapien@protonmail.com>"
@@ -12,10 +12,6 @@ LABEL description="PYrevDNS is a simple tool for performing reverse DNS lookups 
 WORKDIR /usr/src/app
 # Copy Project
 COPY . .
-
-# setup virtualenv
-RUN python3 -m venv venv
-RUN . venv/bin/activate
 
 # Install Project Dependencies
 RUN pip3 install --upgrade pip
