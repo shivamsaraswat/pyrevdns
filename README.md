@@ -122,9 +122,9 @@ Reverse DNS on the list of IP addresses with the help of 1.1.1.1 DNS Resolver.
 #### Example 1
 
 ```bash
-import pyrevdns
+from pyrevdns import Pyrevdns
 
-print(pyrevdns.Pyrevdns.lookup('216.58.196.110', only_domain=True))
+print(Pyrevdns.lookup('216.58.196.110', only_domain=True))
 
 # maa03s19-in-f110.1e100.net
 ```
@@ -132,9 +132,9 @@ print(pyrevdns.Pyrevdns.lookup('216.58.196.110', only_domain=True))
 #### Example 2
 
 ```bash
-import pyrevdns
+from pyrevdns import Pyrevdns
 
-print(pyrevdns.Pyrevdns.lookup('216.58.196.110', resolver_ip='1.1.1.1'))
+print(Pyrevdns.lookup('216.58.196.110', resolver_ip='1.1.1.1'))
 
 # 216.58.196.110  maa03s19-in-f110.1e100.net
 ```
