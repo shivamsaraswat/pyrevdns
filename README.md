@@ -1,7 +1,7 @@
 # PYrevDNS
 
-PYrevDNS is a simple tool for performing reverse DNS lookups on IP addresses. It can be used to perform a single lookup
-or to perform lookups on a list of IP addresses.
+PYrevDNS is a simple tool for performing reverse DNS lookups on IP addresses. It can be used to perform lookup on a single IP address
+or on a list of IP addresses.
 
 ## Installation Through PIP
 To install dependencies, use the following command:
