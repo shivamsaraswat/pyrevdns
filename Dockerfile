@@ -2,7 +2,7 @@
 # Run: docker run -it --rm pyrevdns -h
 
 # Base Image
-FROM cgr.dev/chainguard/python:latest-dev@sha256:ede036bd6cac024a9ab1c6fca3a324f4dbcfe82f67f5c3b7bf1fbf2ef9f8f0e3
+FROM cgr.dev/chainguard/python:latest-dev@sha256:da05d36d8450c8dbc560eb0becf38e6c989b9b0af89770fa42437d4f6b479649
 
 # Maintainer
 LABEL maintainer="Shivam Saraswat <thecybersapien@protonmail.com>"
