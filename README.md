@@ -1,4 +1,6 @@
 # PYrevDNS
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fshivamsaraswat%2Fpyrevdns.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fshivamsaraswat%2Fpyrevdns?ref=badge_shield)
+
 
 PYrevDNS is a simple tool for performing reverse DNS lookups on IP addresses. It can be used to perform lookup on a single IP address
 or on a list of IP addresses.
@@ -146,3 +148,7 @@ A typical run through Docker would look as follows:
 ```bash
 docker run -it --rm pyrevdns -ip 216.58.196.110
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fshivamsaraswat%2Fpyrevdns.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fshivamsaraswat%2Fpyrevdns?ref=badge_large)
